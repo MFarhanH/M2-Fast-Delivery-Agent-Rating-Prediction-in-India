@@ -1,0 +1,38 @@
+Jawab pertanyaan berikut:
+
+1. Jelaskan latar belakang adanya bagging dan cara kerja bagging !
+
+2. Jelaskan perbedaan cara kerja algoritma Random Forest dengan algoritma boosting yang Anda pilih !
+
+3. Jelaskan apa yang dimaksud dengan Cross Validation !
+
+-- Jawaban
+
+1. Bagging (Bootsrap Aggregating) ada karena model machine learning (seperti decision tree) sangat rentan menjadi model yang overfitting, 
+apalagi jika tingkat kompleksitas tinggi. Cara kerja bagging adalah sebagai berikut:
+- dataset asli akan diacak dan dipilih secara random sehingga terbentuk subset baru.
+- di setiap subsetnya akan dibuat model (contohnya decision tree)
+- hasil dari semua model akan digabungkan, sehingga hasil akhirnya akan meminimalisir terjadinya overfitting.
+Hal ini karena model tidak hanya mengandalkan satu sudut pandang saja.
+
+2. Perbedannya adalah sebagai berikut:
+- Random Forest
+    - Cara kerjanya dia akan membangun banyak pohon secara paralel. kemudian ketika semua pohon sudah berdiri sendiri, hasilnya akan digabung.
+    - Tujuannya adalah mengurangi variance model agar tidak overfitting
+    - Model ini umumnya dipakai karena cenderung lebih cepat.
+    - Random Fores juga memberikan akurasi yang cukup bagus dan stabil.
+    - Random Fores juga biasa dipilih ketika dataset banyak noise atau outlier.
+- Boosting (XGBoost)
+    - Cara kerjanya adalah dia akan membangun pohon secara berurutan yang nantinya tiap pohon
+    akan belajar dan melakukan evaluasi dari kesalahan pohon sebelummnya.
+    - Tujuannya adalah agar dapat mengurangi bias dan error yang nantinya diharapkan moodel dapat 
+    memprediksi dengan baik dan benar.
+    - Akuranya bisa lebih akurat, namun rawan overfitting makanya perlu tunning yang bagus.
+    - Cocok untuk dataset yang mau kita prediksi apabila dia membutuhkan keakuratan yang tepat dan bisa dituning maksimal.
+
+3. Cross validation adalah sebuah metode yang dimana membantu kita untuk mencari tahu apakah model kita itu konsisten atau engga.
+Jadi nanti cara kerjanya seperti berikut:
+- Data akan dibagi menjadi beberapa bagian (foldnya).
+- Kemudian model akan dilatih sebanyak foldnya. ketika menjalankan proses ini, nanti secara otomatis
+setiap salah satu bagiannya akan menjadi test, dan sisanya train.
+- Nantinya hasil akurasinya akan dirata-rata. Oleh karena itu kita dapat mengetahui model kita konsisten atau tidak.
