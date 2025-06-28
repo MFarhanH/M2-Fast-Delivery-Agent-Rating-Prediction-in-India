@@ -2,7 +2,7 @@
 Fast Delivery Agent Rating Prediction in India
 
 ## Repository Outline
-
+```
 M2-Fast-Delivery-Agent-Rating-Prediction-in-India/
 ├── P1M2_MuhammadFarhan_Hendriyanto.ipynb
 ├── P1M2_MuhammadFarhan_Hendriyanto_Inference.ipynb
@@ -16,7 +16,7 @@ M2-Fast-Delivery-Agent-Rating-Prediction-in-India/
     ├── Predict.py - Prediction tab
     ├── randomforest_regression_grid_best.pkl - model terbaik yang sudah didapatkan
     └── Fast Delivery Agent Reviews.csv
-
+```
 ## Problem Background
 Layanan pengiriman cepat di India berkembang pesat dengan persaingan ketat antar perusahaan seperti Zepto, Blinkit, dan JioMart. Dalam industri ini, kepuasan pelanggan menjadi faktor penting yang memengaruhi loyalitas, dan bisa diukur lewat rating, review, dan feedback. Berdasarkan analisis sebelumnya, informasi dari rating yang diberikan pelanggan untuk agent delivery terbukti memberikan insight yang berguna untuk meningkatkan kinerja agen. Maka dari itu, proyek ini bertujuan memprediksi rating pelanggan berdasarkan fitur-fitur yang ada.
 
